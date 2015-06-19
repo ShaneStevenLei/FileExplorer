@@ -19,12 +19,15 @@
 
 package net.micode.fileexplorer;
 
+import java.util.ArrayList;
+
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -32,8 +35,6 @@ import android.preference.PreferenceManager;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.ActionMode;
-
-import java.util.ArrayList;
 
 public class FileExplorerTabActivity extends Activity {
     private static final String INSTANCESTATE_TAB = "tab";
@@ -97,14 +98,27 @@ public class FileExplorerTabActivity extends Activity {
         IBackPressedListener backPressedListener = (IBackPressedListener) mTabsAdapter
                 .getItem(mViewPager.getCurrentItem());
         if (!backPressedListener.onBack()) {
-            super.onBackPressed();
+        	DialogTips exitDialog = new DialogTips(this, getResources()
+					.getString(R.string.tips), getResources().getString(
+					R.string.exit), getResources().getString(R.string.confirm),
+					true, true);
+			exitDialog.show();
+			exitDialog
+					.SetOnSuccessListener(new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface,
+								int userId) {
+							finish();
+						}
+					});
+			exitDialog = null;
         }
     }
 
     public interface IBackPressedListener {
         /**
-         * 处理back事件。
-         * @return True: 表示已经处理; False: 没有处理，让基类处理。
+         * å¤„ç�†backäº‹ä»¶ã€‚
+         * @return True: è¡¨ç¤ºå·²ç»�å¤„ç�†; False: æ²¡æœ‰å¤„ç�†ï¼Œè®©åŸºç±»å¤„ç�†ã€‚
          */
         boolean onBack();
     }
@@ -219,4 +233,5 @@ public class FileExplorerTabActivity extends Activity {
         public void onTabReselected(Tab tab, FragmentTransaction ft) {
         }
     }
+   
 }

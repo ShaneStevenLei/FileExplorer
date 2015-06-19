@@ -100,5 +100,8 @@
     <string name="default_primary_folder">/mnt/sdcard</string>
     <string name="pref_primary_folder_summary">Der Ordner wird angezeigt, wenn die App gestartet wird, aktuell ist das <xliff:g id="string">%1$s</xliff:g></string>
     <string name="pref_show_real_path_summary">Echten Pfad in der Navigationsleiste anzeigen</string>
+    <string name="add_avator">Kopfzeile</string>
+    <string name="tips">Tipps</string>
+    <string name="exit">Wollen Sie wirklich beenden?</string>
 
 </resources>

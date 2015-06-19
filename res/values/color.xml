@@ -16,5 +16,10 @@
 
     <color name="remote_connect_text">#FFe78018</color>
     <color name="remote_disconnect_text">#FF901821</color>
+    
+    <color name="transparent">#00ffffff</color>
+    <color name="base_color_text_white">#ffffff</color>
+    <color name="base_color_text_black">#3e3e39</color>
+    <color name="dialog_color_title">#f82c22</color>
 
 </resources>

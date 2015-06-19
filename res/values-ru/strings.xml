@@ -100,5 +100,8 @@
     <string name="default_primary_folder">/mnt/sdcard</string>
     <string name="pref_primary_folder_summary">Папка, которая появляется при запуске приложения <xliff:g id="string">%1$s</xliff:g></string>
     <string name="pref_show_real_path_summary">Показать реальный путь в панели навигации</string>
+    <string name="add_avator">заголовок</string>
+    <string name="tips">наконечник</string>
+    <string name="exit">Вы хотите выйти ли?</string>
 
 </resources>

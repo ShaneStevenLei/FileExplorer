@@ -114,4 +114,5 @@ public class FileExplorerPreferenceActivity extends PreferenceActivity implement
     	return settings.getBoolean(SHOW_REAL_PATH, false);
     }
 
+    
 }
